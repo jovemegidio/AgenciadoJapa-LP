@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jovemegidio.github.io/AgenciadoJapa-LP/sitemap.xml

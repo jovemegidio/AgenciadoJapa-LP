@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agência do Japa — Agência Digital</title>
+<meta name="description" content="Landing page institucional da Agência do Japa, agência digital focada em sites, aplicativos, marketing digital e tecnologia para negócios em crescimento.">
+<meta name="author" content="Agência do Japa">
+<meta name="theme-color" content="#00c136">
+<link rel="canonical" href="https://jovemegidio.github.io/AgenciadoJapa-LP/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agência do Japa — Agência Digital">
+<meta property="og:description" content="Sites, apps, marketing digital e tecnologia com foco em performance, conversão e presença online profissional.">
+<meta property="og:url" content="https://jovemegidio.github.io/AgenciadoJapa-LP/">
+<meta property="og:image" content="https://jovemegidio.github.io/AgenciadoJapa-LP/uploads/logo-1777550210245.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agência do Japa — Agência Digital">
+<meta name="twitter:description" content="Landing page institucional para apresentar serviços digitais, portfólio, conteúdos e canais de contato.">
+<meta name="twitter:image" content="https://jovemegidio.github.io/AgenciadoJapa-LP/uploads/logo-1777550210245.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: oklch(0.08 0.006 148);
+    --bg2: oklch(0.11 0.006 148);
+    --bg3: oklch(0.14 0.007 148);
+    --border: oklch(0.20 0.01 148);
+    --green: oklch(0.65 0.25 142);
+    --green-dim: oklch(0.45 0.18 142);
+    --green-glow: oklch(0.65 0.25 142 / 0.15);
+    --white: oklch(0.97 0.005 148);
+    --gray: oklch(0.60 0.005 148);
+    --gray-dim: oklch(0.40 0.005 148);
+    --font-head: 'Space Grotesk', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --nav-bg: oklch(0.08 0.006 148 / 0.85);
+    --nav-scrolled: oklch(0.06 0.006 148 / 0.95);
+    --shadow: oklch(0 0 0 / 0.4);
+  }
+
+  [data-theme="light"] {
+    --bg: oklch(0.97 0.004 148);
+    --bg2: oklch(0.93 0.005 148);
+    --bg3: oklch(0.89 0.006 148);
+    --border: oklch(0.82 0.008 148);
+    --green: oklch(0.50 0.22 142);
+    --green-dim: oklch(0.38 0.16 142);
+    --green-glow: oklch(0.50 0.22 142 / 0.12);
+    --white: oklch(0.12 0.005 148);
+    --gray: oklch(0.42 0.006 148);
+    --gray-dim: oklch(0.60 0.005 148);
+    --nav-bg: oklch(0.97 0.004 148 / 0.90);
+    --nav-scrolled: oklch(0.95 0.005 148 / 0.97);
+    --shadow: oklch(0.5 0.01 148 / 0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    height: 72px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  nav.scrolled {
+    height: 60px;
+    background: var(--nav-scrolled);
+  }
+
+  .nav-logo img { height: 36px; object-fit: contain; }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-family: var(--font-head);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--green);
+    color: #000;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  /* ─── THEME TOGGLE ─── */
+  .theme-toggle {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    color: var(--gray);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--green);
+    color: var(--green);
+  }
+
+  .theme-toggle svg { width: 16px; height: 16px; }
+  .icon-sun { display: none; }
+  .icon-moon { display: block; }
+  [data-theme="light"] .icon-sun { display: block; }
+  [data-theme="light"] .icon-moon { display: none; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* ─── HERO ─── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 5vw 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green-glow);
+    border: 1px solid oklch(0.65 0.25 142 / 0.3);
+    color: var(--green);
+    font-size: 12px;
+    font-family: var(--font-head);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+
+  h1 {
+    font-family: var(--font-head);
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  h1 .accent { color: var(--green); }
+
+  .hero-sub {
+    color: var(--gray);
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green);
+    color: #000;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px oklch(0.65 0.25 142 / 0.4);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-family: var(--font-head);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--green);
+    background: var(--green-glow);
+  }
+
+  /* Hero visual */
+  .hero-visual {
+    position: relative;
+    height: 460px;
+  }
+
+  .hero-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    position: absolute;
+  }
+
+  .hero-card-main {
+    width: 320px;
+    top: 40px; left: 20px;
+    z-index: 2;
+  }
+
+  .hero-card-secondary {
+    width: 240px;
+    bottom: 40px; right: 0;
+    z-index: 3;
+  }
+
+  .hero-card-float {
+    width: 180px;
+    top: 0; right: 40px;
+    z-index: 1;
+  }
+
+  .card-label {
+    font-size: 11px;
+    font-family: var(--font-head);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-dim);
+    margin-bottom: 12px;
+  }
+
+  .card-metric {
+    font-family: var(--font-head);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 4px;
+  }
+
+  .card-metric-label {
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  .card-bar-row {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--gray);
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: var(--green);
+    border-radius: 2px;
+    animation: growBar 1.5s ease forwards;
+  }
+
+  @keyframes growBar {
+    from { width: 0; }
+  }
+
+  .avatar-stack {
+    display: flex;
+    margin-top: 12px;
+  }
+
+  .avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--bg2);
+    margin-left: -8px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+  }
+
+  .avatar:first-child { margin-left: 0; }
+
+  .bg-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, oklch(0.65 0.25 142 / 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .bg-glow-1 { top: -200px; right: -200px; }
+  .bg-glow-2 { bottom: -200px; left: -200px; width: 400px; height: 400px; }
+
+  /* ─── STATS ─── */
+  #stats {
+    padding: 60px 5vw;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg2);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-family: var(--font-head);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: var(--gray);
+    font-family: var(--font-head);
+  }
+
+  /* ─── SECTIONS SHARED ─── */
+  section { padding: 100px 5vw; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-family: var(--font-head);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+
+  .section-desc {
+    color: var(--gray);
+    font-size: 17px;
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 56px;
+  }
+
+  /* ─── SERVICES ─── */
+  #servicos { background: var(--bg); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--green);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover {
+    border-color: oklch(0.65 0.25 142 / 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px oklch(0 0 0 / 0.4);
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-icon {
+    width: 52px; height: 52px;
+    background: var(--green-glow);
+    border: 1px solid oklch(0.65 0.25 142 / 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--green);
+  }
+
+  .service-icon svg { width: 24px; height: 24px; }
+
+  .service-card h3 {
+    font-family: var(--font-head);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-family: var(--font-head);
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--gray);
+  }
+
+  /* ─── SOBRE ─── */
+  #sobre { background: var(--bg2); }
+
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .sobre-visual {
+    position: relative;
+    height: 420px;
+  }
+
+  .sobre-img-placeholder {
+    position: absolute;
+    inset: 0;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .sobre-img-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 24px,
+      oklch(0.20 0.005 148) 24px,
+      oklch(0.20 0.005 148) 25px
+    );
+  }
+
+  .sobre-img-text {
+    position: relative;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--gray-dim);
+    text-align: center;
+  }
+
+  .sobre-badge {
+    position: absolute;
+    bottom: 24px;
+    right: -20px;
+    background: var(--green);
+    color: #000;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    line-height: 1.4;
+  }
+
+  .sobre-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .sobre-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  .check-icon {
+    width: 20px; height: 20px;
+    min-width: 20px;
+    background: var(--green-glow);
+    border: 1px solid oklch(0.65 0.25 142 / 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  .check-icon svg { width: 11px; height: 11px; color: var(--green); }
+
+  /* ─── PORTFOLIO ─── */
+  #portfolio { background: var(--bg); }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .portfolio-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    position: relative;
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px oklch(0 0 0 / 0.5);
+    border-color: oklch(0.65 0.25 142 / 0.3);
+  }
+
+  .portfolio-thumb {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-info {
+    padding: 20px;
+  }
+
+  .portfolio-cat {
+    font-size: 11px;
+    font-family: var(--font-head);
+    color: var(--green);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .portfolio-info h3 {
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .portfolio-info p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* ─── PORTFOLIO FILTERS ─── */
+  .portfolio-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .pf-btn {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    color: var(--gray);
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .pf-btn:hover {
+    border-color: var(--green);
+    color: var(--white);
+  }
+
+  .pf-btn.active {
+    background: var(--green);
+    border-color: var(--green);
+    color: #000;
+    font-weight: 700;
+  }
+
+  .portfolio-card[hidden] { display: none; }
+
+  .portfolio-tech-stack {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    z-index: 2;
+  }
+
+  .tech-pill {
+    background: oklch(0 0 0 / 0.55);
+    border: 1px solid oklch(1 0 0 / 0.15);
+    color: oklch(0.9 0.005 148);
+    font-family: var(--font-head);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    backdrop-filter: blur(8px);
+    letter-spacing: 0.03em;
+  }
+
+  .portfolio-status {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 2;
+  }
+
+  .portfolio-status.live {
+    background: oklch(0.65 0.25 142 / 0.2);
+    border: 1px solid oklch(0.65 0.25 142 / 0.5);
+    color: var(--green);
+  }
+
+  .portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: oklch(0 0 0 / 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 3;
+  }
+
+  .portfolio-card:hover .portfolio-overlay { opacity: 1; }
+
+  .overlay-btn {
+    background: var(--green);
+    color: #000;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .overlay-btn:hover { transform: scale(1.05); }
+
+  .overlay-btn-ghost {
+    background: oklch(1 0 0 / 0.1);
+    border: 1px solid oklch(1 0 0 / 0.25);
+    color: var(--white);
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 13px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .overlay-btn-ghost:hover { background: oklch(1 0 0 / 0.2); }
+
+  .portfolio-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--gray-dim);
+    font-family: var(--font-head);
+    flex-wrap: wrap;
+  }
+
+  .meta-dot { color: var(--border); }
+  .live-text { color: var(--green); font-weight: 600; }
+
+  /* ─── DEPOIMENTOS ─── */
+  #depoimentos { background: var(--bg2); }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    position: relative;
+    transition: border-color 0.3s;
+  }
+
+  .testimonial-card:hover {
+    border-color: oklch(0.65 0.25 142 / 0.3);
+  }
+
+  .quote-mark {
+    font-size: 48px;
+    line-height: 1;
+    color: var(--green);
+    font-family: var(--font-head);
+    margin-bottom: 12px;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+  }
+
+  .author-name {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .author-role {
+    font-size: 12px;
+    color: var(--gray-dim);
+  }
+
+  .stars {
+    color: var(--green);
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  /* ─── BLOG ─── */
+  #blog { background: var(--bg); }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .blog-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-4px);
+    border-color: oklch(0.65 0.25 142 / 0.3);
+  }
+
+  .blog-thumb {
+    height: 140px;
+    background: var(--bg3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .blog-thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 32px,
+      oklch(0.18 0.005 148) 32px,
+      oklch(0.18 0.005 148) 33px
+    );
+  }
+
+  .blog-thumb-cat {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--green);
+    color: #000;
+    font-family: var(--font-head);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .blog-body {
+    padding: 24px;
+  }
+
+  .blog-meta {
+    font-size: 12px;
+    color: var(--gray-dim);
+    font-family: var(--font-head);
+    margin-bottom: 10px;
+  }
+
+  .blog-body h3 {
+    font-family: var(--font-head);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .blog-body p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .read-more {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+  }
+
+  .read-more:hover { gap: 10px; }
+
+  /* ─── CTA ─── */
+  #contato {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+  }
+
+  .cta-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cta-box h2 { margin-bottom: 20px; }
+
+  .cta-box p {
+    color: var(--gray);
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+    margin: 0 auto 40px;
+    text-align: left;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+  .form-group label {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray);
+    letter-spacing: 0.02em;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--green);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-group select { cursor: pointer; }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--gray-dim); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: oklch(0.06 0.005 148);
+    border-top: 1px solid var(--border);
+    padding: 60px 5vw 40px;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand img { height: 36px; margin-bottom: 16px; }
+
+  .footer-brand p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 260px;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .footer-col a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--green); }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--gray-dim);
+    font-family: var(--font-head);
+  }
+
+  .footer-bottom a { color: var(--green); text-decoration: none; }
+
+  /* ─── WHATSAPP ─── */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 200;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
+  }
+
+  .whatsapp-float svg { width: 28px; height: 28px; }
+
+  .whatsapp-tooltip {
+    position: fixed;
+    bottom: 100px;
+    right: 32px;
+    z-index: 199;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    max-width: 220px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    transform: translateY(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+
+  .whatsapp-float:hover + .whatsapp-tooltip,
+  .whatsapp-tooltip:hover {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  .whatsapp-tooltip p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .whatsapp-tooltip a {
+    display: block;
+    background: #25D366;
+    color: #000;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  /* ─── REVEAL ANIMATIONS ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+
+  /* ─── MOBILE HAMBURGER ─── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .services-grid { grid-template-columns: 1fr; }
+    .sobre-grid { grid-template-columns: 1fr; }
+    .sobre-visual { display: none; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-logo" href="#hero">
+    <img src="uploads/logo-1777550210245.png" alt="Agência do Japa">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#depoimentos">Clientes</a></li>
+    <li><a href="#blog">Blog</a></li>
+  </ul>
+  <a href="#contato" class="nav-cta">Falar com a Agência</a>
+  <div class="nav-right">
+    <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema" aria-label="Alternar modo claro/escuro">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').style.display='flex'">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">Agência Digital — Desde 2023</div>
+      <h1>Crescimento digital que <span class="accent">realmente funciona</span></h1>
+      <p class="hero-sub">Somos uma startup que ouve, entende e executa. Da criação de sites ao marketing estratégico — entregamos resultados reais para negócios reais.</p>
+      <div class="hero-actions">
+        <a href="#contato" class="btn-primary">
+          Começar agora
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#portfolio" class="btn-outline">Ver portfólio</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <!-- Card principal -->
+      <div class="hero-card hero-card-main reveal">
+        <div class="card-label">Performance Mensal</div>
+        <div class="card-metric">+247%</div>
+        <div class="card-metric-label">crescimento médio dos clientes</div>
+        <div class="card-bar-row">
+          <div class="card-bar">
+            <span style="width:60px;">Sites</span>
+            <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+            <span>88%</span>
+          </div>
+          <div class="card-bar">
+            <span style="width:60px;">Ads</span>
+            <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+            <span>72%</span>
+          </div>
+          <div class="card-bar">
+            <span style="width:60px;">Social</span>
+            <div class="bar-track"><div class="bar-fill" style="width:94%"></div></div>
+            <span>94%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card secundário -->
+      <div class="hero-card hero-card-secondary reveal reveal-delay-2">
+        <div class="card-label">Clientes Ativos</div>
+        <div class="card-metric" style="font-size:28px;">42+</div>
+        <div class="avatar-stack">
+          <div class="avatar" style="background:#4ade80;">J</div>
+          <div class="avatar" style="background:#60a5fa;">M</div>
+          <div class="avatar" style="background:#f59e0b;">R</div>
+          <div class="avatar" style="background:#a78bfa;">K</div>
+          <div class="avatar" style="background: var(--bg3); color: var(--gray); font-size:10px;">+38</div>
+        </div>
+      </div>
+
+      <!-- Card flutuante -->
+      <div class="hero-card hero-card-float reveal reveal-delay-1">
+        <div class="card-label">Projetos Entregues</div>
+        <div class="card-metric" style="font-size:28px;">120+</div>
+        <div class="card-metric-label">em 2024–2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div id="stats">
+  <div class="stats-grid">
+    <div class="reveal">
+      <div class="stat-value" data-count="120">0</div>
+      <div class="stat-label">Projetos entregues</div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="stat-value" data-count="42">0</div>
+      <div class="stat-label">Clientes ativos</div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="stat-value" data-count="247">0</div>
+      <div class="stat-label">% crescimento médio</div>
+    </div>
+    <div class="reveal reveal-delay-3">
+      <div class="stat-value" data-count="3">0</div>
+      <div class="stat-label">Anos de experiência</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="section-inner">
+    <div class="reveal"><span class="section-tag">O que fazemos</span></div>
+    <h2 class="reveal reveal-delay-1">Soluções digitais <br>do início ao <span style="color:var(--green)">resultado</span></h2>
+    <p class="section-desc reveal reveal-delay-2">Cobrimos toda a jornada digital da sua empresa — desde a identidade até a conversão.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3>Criação de Sites</h3>
+        <p>Sites institucionais, landing pages e e-commerces com design moderno, performance e foco em conversão.</p>
+        <div class="service-tags">
+          <span class="tag">WordPress</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">E-commerce</span>
+          <span class="tag">Landing Page</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+          </svg>
+        </div>
+        <h3>Desenvolvimento de Apps</h3>
+        <p>Aplicativos mobile nativos e híbridos para iOS e Android, com UI/UX pensada para o usuário final.</p>
+        <div class="service-tags">
+          <span class="tag">React Native</span>
+          <span class="tag">Flutter</span>
+          <span class="tag">iOS</span>
+          <span class="tag">Android</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3>Marketing Digital</h3>
+        <p>Estratégias de tráfego pago, inbound marketing e funis de conversão para gerar leads qualificados.</p>
+        <div class="service-tags">
+          <span class="tag">Google Ads</span>
+          <span class="tag">Meta Ads</span>
+          <span class="tag">Email Mktg</span>
+          <span class="tag">Inbound</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Gestão de Redes Sociais</h3>
+        <p>Produção de conteúdo, calendário editorial e gestão completa das suas redes para construir autoridade.</p>
+        <div class="service-tags">
+          <span class="tag">Instagram</span>
+          <span class="tag">LinkedIn</span>
+          <span class="tag">TikTok</span>
+          <span class="tag">Conteúdo</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+          </svg>
+        </div>
+        <h3>Consultoria em TI</h3>
+        <p>Assessoria tecnológica para escolher, implementar e otimizar as ferramentas certas para seu negócio crescer.</p>
+        <div class="service-tags">
+          <span class="tag">Automação</span>
+          <span class="tag">Cloud</span>
+          <span class="tag">Segurança</span>
+          <span class="tag">Integração</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <h3>Design Gráfico</h3>
+        <p>Identidade visual, materiais gráficos e branding que comunicam a essência da sua marca com precisão.</p>
+        <div class="service-tags">
+          <span class="tag">Branding</span>
+          <span class="tag">UI/UX</span>
+          <span class="tag">Print</span>
+          <span class="tag">Motion</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="section-inner">
+    <div class="sobre-grid">
+      <div class="sobre-visual reveal">
+        <div class="sobre-img-placeholder">
+          <div class="sobre-img-text">foto da equipe<br>ou escritório</div>
+        </div>
+        <div class="sobre-badge">
+          ★ Startup que<br>ouve você
+        </div>
+      </div>
+
+      <div>
+        <span class="section-tag reveal">Quem somos</span>
+        <h2 class="reveal reveal-delay-1">Tecnologia com <br><span style="color:var(--green)">propósito humano</span></h2>
+        <p style="color:var(--gray); font-size:16px; line-height:1.8; margin-bottom:28px;" class="reveal reveal-delay-2">
+          A Agência do Japa nasceu com um propósito simples: <strong style="color:var(--white)">ouvir antes de agir</strong>. Somos uma startup ágil que entende que cada cliente tem uma necessidade única — e entregamos soluções sob medida, sem padrão de prateleira.
+        </p>
+        <ul class="sobre-list reveal reveal-delay-2">
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Atendimento personalizado — sem scripts, sem burocracia
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Time multidisciplinar: dev, design e marketing sob o mesmo teto
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Foco em resultados mensuráveis, não em promessas vazias
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Preços justos para startups e pequenas empresas em crescimento
+          </li>
+        </ul>
+        <a href="#contato" class="btn-primary reveal reveal-delay-3" style="display:inline-flex; margin-top: 8px;">
+          Conversar com a gente
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section id="portfolio">
+  <div class="section-inner">
+    <div class="reveal"><span class="section-tag">Cases & Portfólio</span></div>
+    <h2 class="reveal reveal-delay-1">Projetos reais, <span style="color:var(--green)">impacto real</span></h2>
+    <p class="section-desc reveal reveal-delay-2">Do ERP industrial ao e-commerce — entregamos sistemas completos com tecnologia de ponta.</p>
+
+    <!-- Filter tabs -->
+    <div class="portfolio-filters reveal reveal-delay-2">
+      <button class="pf-btn active" onclick="filterPortfolio('all', this)">Todos</button>
+      <button class="pf-btn" onclick="filterPortfolio('sistema', this)">Sistemas</button>
+      <button class="pf-btn" onclick="filterPortfolio('ecommerce', this)">E-commerce</button>
+      <button class="pf-btn" onclick="filterPortfolio('app', this)">Apps</button>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- Zyntra ERP -->
+      <div class="portfolio-card reveal" data-cat="sistema">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.10 0.01 270), oklch(0.16 0.02 270));">
+          <div class="portfolio-tech-stack">
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">MySQL</span>
+            <span class="tech-pill">Socket.IO</span>
+            <span class="tech-pill">PWA</span>
+            <span class="tech-pill">Android</span>
+          </div>
+          <div class="portfolio-status live">● Em Produção</div>
+          <div class="portfolio-overlay">
+            <a href="https://aluforce.api.br" target="_blank" class="overlay-btn">Ver Demo →</a>
+            <a href="https://github.com/jovemegidio/Zyntra" target="_blank" class="overlay-btn-ghost">GitHub</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">ERP SaaS · Sistema Industrial</div>
+          <h3>Zyntra ERP</h3>
+          <p>Plataforma ERP industrial multi-tenant com 85+ módulos: NF-e SEFAZ, CNAB 240, chat corporativo com IA, 72+ relatórios e app Android nativo.</p>
+          <div class="portfolio-meta">
+            <span class="meta-item">72+ relatórios</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">v2.4.0</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item live-text">Produção ativa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concord -->
+      <div class="portfolio-card reveal reveal-delay-1" data-cat="app">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.10 0.02 290), oklch(0.16 0.04 290));">
+          <div class="portfolio-tech-stack">
+            <span class="tech-pill">React 18</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">WebSocket</span>
+            <span class="tech-pill">Zustand</span>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="https://github.com/jovemegidio/concord" target="_blank" class="overlay-btn">Ver GitHub →</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">App Web · Workspace Colaborativo</div>
+          <h3>Concord</h3>
+          <p>Workspace que une Discord + Trello + Notion em um só lugar. Chat em tempo real, boards Kanban com drag & drop, e editor de blocos estilo Notion.</p>
+          <div class="portfolio-meta">
+            <span class="meta-item">3 módulos</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">5 temas</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">Real-time</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pontto -->
+      <div class="portfolio-card reveal reveal-delay-2" data-cat="sistema">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.10 0.015 240), oklch(0.16 0.025 200));">
+          <div class="portfolio-tech-stack">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Flask</span>
+            <span class="tech-pill">Chart.js</span>
+            <span class="tech-pill">Bootstrap 5</span>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="https://jovemegidio.github.io/Pontto/" target="_blank" class="overlay-btn">Ver Demo →</a>
+            <a href="https://github.com/jovemegidio/Pontto" target="_blank" class="overlay-btn-ghost">GitHub</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Sistema Web · RH & Gestão</div>
+          <h3>Pontto — Ponto Inteligente</h3>
+          <p>Ponto eletrônico com gamificação, mood tracker, wellness score (0–100), focus timer Pomodoro e dashboards analíticos em tempo real.</p>
+          <div class="portfolio-meta">
+            <span class="meta-item">10 conquistas</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">XP & Streaks</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">Dark mode</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- B10 Mantos -->
+      <div class="portfolio-card reveal reveal-delay-1" data-cat="ecommerce">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.09 0.005 30), oklch(0.18 0.04 45));">
+          <div class="portfolio-tech-stack">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">PWA</span>
+          </div>
+          <div class="portfolio-status live">● Online</div>
+          <div class="portfolio-overlay">
+            <a href="https://b10mantos.com" target="_blank" class="overlay-btn">Ver Site →</a>
+            <a href="https://github.com/jovemegidio/B10-Mantos" target="_blank" class="overlay-btn-ghost">GitHub</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">E-commerce · Futebol</div>
+          <h3>B10 Mantos</h3>
+          <p>E-commerce completo para loja de camisas de futebol premium com catálogo dinâmico, carrinho, cupons, checkout via WhatsApp e painel admin.</p>
+          <div class="portfolio-meta">
+            <span class="meta-item">17 páginas</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">PWA</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item live-text">b10mantos.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ContentHub CMS -->
+      <div class="portfolio-card reveal reveal-delay-2" data-cat="sistema">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.10 0.01 160), oklch(0.16 0.025 160));">
+          <div class="portfolio-tech-stack">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">SQLite</span>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="https://github.com/jovemegidio/Sistema-CMS" target="_blank" class="overlay-btn">Ver GitHub →</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">CMS · Full-Stack</div>
+          <h3>ContentHub CMS</h3>
+          <p>CMS profissional com painel admin moderno, autenticação JWT, CRUD completo, biblioteca de mídia, gráficos e controle de acesso por roles.</p>
+          <div class="portfolio-meta">
+            <span class="meta-item">JWT + Roles</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">Docker</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">REST API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Betina Nails -->
+      <div class="portfolio-card reveal reveal-delay-3" data-cat="sistema">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.10 0.02 330), oklch(0.18 0.06 310));">
+          <div class="portfolio-tech-stack">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">LocalStorage</span>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="https://github.com/jovemegidio/Nail-Designer" target="_blank" class="overlay-btn">Ver GitHub →</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Sistema Web · Agendamento</div>
+          <h3>Betina Nails Studio</h3>
+          <p>Sistema completo para nail designer: agenda interativa, gestão de clientes, galeria de trabalhos, catálogo de serviços e 8 temas de cor.</p>
+          <div class="portfolio-meta">
+            <span class="meta-item">8 temas</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">Zero backend</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">SPA</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top: 48px;" class="reveal">
+      <a href="https://github.com/jovemegidio" target="_blank" class="btn-outline" style="display:inline-flex;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        Ver todos os projetos no GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="section-inner">
+    <div class="reveal"><span class="section-tag">Clientes</span></div>
+    <h2 class="reveal reveal-delay-1">O que nossos clientes <span style="color:var(--green)">dizem</span></h2>
+
+    <div class="testimonials-grid" style="margin-top: 48px;">
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">A Agência do Japa transformou nossa presença digital. Em 3 meses tivemos mais resultados do que nos últimos 2 anos com outra agência.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#4ade80;">M</div>
+          <div>
+            <div class="author-name">Marcos Oliveira</div>
+            <div class="author-role">CEO · TechStart Soluções</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">O que mais me impressionou foi o atendimento. Eles realmente ouviram o que precisávamos antes de propor qualquer solução.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#60a5fa;">R</div>
+          <div>
+            <div class="author-name">Rafaela Costa</div>
+            <div class="author-role">Fundadora · Estúdio Forma</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">Nosso app foi entregue no prazo, dentro do orçamento e com uma qualidade absurda. Já estamos no segundo projeto com eles.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#f59e0b;">L</div>
+          <div>
+            <div class="author-name">Lucas Ferreira</div>
+            <div class="author-role">CTO · Delivery+</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-inner">
+    <div class="reveal"><span class="section-tag">Blog & Conteúdo</span></div>
+    <h2 class="reveal reveal-delay-1">Insights do <span style="color:var(--green)">mundo digital</span></h2>
+    <p class="section-desc reveal reveal-delay-2">Conteúdo gratuito para ajudar sua empresa a crescer online.</p>
+
+    <!-- Blog filters -->
+    <div class="blog-filters reveal reveal-delay-2">
+      <button class="bf-btn active" onclick="filterBlog('all', this)">Todos</button>
+      <button class="bf-btn" onclick="filterBlog('marketing', this)">Marketing & Ads</button>
+      <button class="bf-btn" onclick="filterBlog('dev', this)">Programação</button>
+      <button class="bf-btn" onclick="filterBlog('design', this)">Design</button>
+      <button class="bf-btn" onclick="filterBlog('negocio', this)">Negócios</button>
+    </div>
+
+    <!-- Featured article -->
+    <div class="blog-featured reveal" data-blog-cat="marketing" onclick="openArticle(0)">
+      <div class="blog-featured-thumb" style="background: linear-gradient(135deg, oklch(0.12 0.04 142), oklch(0.20 0.08 160));">
+        <span class="blog-thumb-cat">Marketing & Ads · Destaque</span>
+        <div class="blog-featured-overlay">
+          <span>Ler artigo completo →</span>
+        </div>
+      </div>
+      <div class="blog-featured-body">
+        <div class="blog-meta">28 Abr 2025 · 8 min de leitura</div>
+        <h3>Meta Ads em 2025: as novas funcionalidades de IA que estão mudando o jogo</h3>
+        <p>O Meta lançou recursos de IA generativa para criativos e segmentação automatizada. Veja como usar isso a favor do seu negócio e reduzir o custo por lead.</p>
+        <div style="display:flex; align-items:center; gap:12px; margin-top:16px;">
+          <div class="author-avatar" style="background: var(--green); width:36px; height:36px; font-size:13px;">J</div>
+          <div>
+            <div style="font-family:var(--font-head); font-size:13px; font-weight:600; color:var(--white);">Equipe Agência do Japa</div>
+            <div style="font-size:12px; color:var(--gray-dim);">Especialistas em Marketing Digital</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-grid" style="margin-top:24px;">
+
+      <div class="blog-card reveal" data-blog-cat="dev" onclick="openArticle(1)">
+        <div class="blog-thumb" style="background: linear-gradient(135deg, oklch(0.12 0.02 240), oklch(0.20 0.04 260));">
+          <div class="blog-thumb-cat">Programação</div>
+          <div class="blog-card-overlay"><span>Ler →</span></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">25 Abr 2025 · 6 min</div>
+          <h3>React 19 chegou: o que muda no desenvolvimento frontend</h3>
+          <p>Server Components, Actions e Compiler — entenda as novidades que vão transformar como apps React são construídos.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </div>
+
+      <div class="blog-card reveal reveal-delay-1" data-blog-cat="marketing" onclick="openArticle(2)">
+        <div class="blog-thumb" style="background: linear-gradient(135deg, oklch(0.12 0.04 30), oklch(0.20 0.07 45));">
+          <div class="blog-thumb-cat">Marketing & Ads</div>
+          <div class="blog-card-overlay"><span>Ler →</span></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">20 Abr 2025 · 5 min</div>
+          <h3>Google Ads Performance Max: vale a pena em 2025?</h3>
+          <p>A campanha PMax já responde por 80% do inventário Google. Aprenda quando usar, quando evitar e como otimizar os resultados.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </div>
+
+      <div class="blog-card reveal reveal-delay-2" data-blog-cat="dev" onclick="openArticle(3)">
+        <div class="blog-thumb" style="background: linear-gradient(135deg, oklch(0.12 0.02 180), oklch(0.20 0.04 200));">
+          <div class="blog-thumb-cat">Programação</div>
+          <div class="blog-card-overlay"><span>Ler →</span></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">15 Abr 2025 · 7 min</div>
+          <h3>Node.js vs Bun vs Deno: qual runtime usar em 2025?</h3>
+          <p>Benchmark real de performance, ecossistema e produtividade entre os três principais runtimes JavaScript do mercado.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </div>
+
+      <div class="blog-card reveal reveal-delay-1" data-blog-cat="design" onclick="openArticle(4)">
+        <div class="blog-thumb" style="background: linear-gradient(135deg, oklch(0.12 0.03 290), oklch(0.20 0.05 310));">
+          <div class="blog-thumb-cat">Design</div>
+          <div class="blog-card-overlay"><span>Ler →</span></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">10 Abr 2025 · 4 min</div>
+          <h3>Design system: por que sua empresa precisa de um (e como montar)</h3>
+          <p>Da inconsistência visual ao produto coeso — como um design system economiza tempo e melhora a experiência do usuário.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </div>
+
+      <div class="blog-card reveal reveal-delay-2" data-blog-cat="negocio" onclick="openArticle(5)">
+        <div class="blog-thumb" style="background: linear-gradient(135deg, oklch(0.12 0.03 45), oklch(0.20 0.06 30));">
+          <div class="blog-thumb-cat">Negócios</div>
+          <div class="blog-card-overlay"><span>Ler →</span></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">2 Abr 2025 · 6 min</div>
+          <h3>Agência digital ou freelancer: qual contratar para seu projeto?</h3>
+          <p>Prós, contras e o momento certo para escolher cada um. Uma análise honesta para quem está decidindo onde investir.</p>
+          <span class="read-more">Ler artigo →</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BLOG MODAL -->
+<div id="blog-modal" style="display:none; position:fixed; inset:0; z-index:500; background:oklch(0 0 0 / 0.7); backdrop-filter:blur(8px); overflow-y:auto; padding: 40px 20px;">
+  <div style="max-width:720px; margin:0 auto; background:var(--bg2); border:1px solid var(--border); border-radius:20px; overflow:hidden;">
+    <div style="padding:24px 32px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center;">
+      <span id="modal-cat" style="font-family:var(--font-head); font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green);"></span>
+      <button onclick="closeBlogModal()" style="background:var(--bg3); border:1px solid var(--border); color:var(--gray); width:36px; height:36px; border-radius:8px; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center;">×</button>
+    </div>
+    <div style="padding:32px;">
+      <div id="modal-meta" style="font-size:13px; color:var(--gray-dim); font-family:var(--font-head); margin-bottom:12px;"></div>
+      <h2 id="modal-title" style="font-family:var(--font-head); font-size:28px; font-weight:700; line-height:1.25; margin-bottom:20px; letter-spacing:-0.02em;"></h2>
+      <div id="modal-content" style="color:var(--gray); font-size:16px; line-height:1.8;"></div>
+      <div id="modal-loading" style="display:none; text-align:center; padding:40px;">
+        <div style="display:inline-block; width:32px; height:32px; border:3px solid var(--border); border-top-color:var(--green); border-radius:50%; animation:spin 0.8s linear infinite;"></div>
+        <p style="color:var(--gray); margin-top:16px; font-family:var(--font-head); font-size:14px;">Gerando conteúdo com IA...</p>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .blog-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .bf-btn {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    color: var(--gray);
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .bf-btn:hover { border-color: var(--green); color: var(--white); }
+  .bf-btn.active { background: var(--green); border-color: var(--green); color: #000; font-weight: 700; }
+
+  .blog-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg2);
+    cursor: pointer;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .blog-featured:hover {
+    border-color: oklch(0.65 0.25 142 / 0.4);
+    transform: translateY(-2px);
+  }
+
+  .blog-featured-thumb {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blog-featured-overlay {
+    position: absolute;
+    inset: 0;
+    background: oklch(0 0 0 / 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .blog-featured:hover .blog-featured-overlay { opacity: 1; }
+
+  .blog-featured-overlay span {
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--white);
+    font-size: 15px;
+    border: 2px solid var(--white);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  .blog-featured-body {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .blog-featured-body h3 {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+
+  .blog-featured-body p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  .blog-card { cursor: pointer; }
+
+  .blog-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: oklch(0 0 0 / 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .blog-card:hover .blog-card-overlay { opacity: 1; }
+
+  .blog-card-overlay span {
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--white);
+    font-size: 14px;
+    border: 2px solid var(--white);
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 900px) {
+    .blog-featured { grid-template-columns: 1fr; }
+    .blog-featured-thumb { height: 180px; }
+  }
+</style>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="section-inner">
+    <div class="cta-box">
+      <span class="section-tag reveal">Fale conosco</span>
+      <h2 class="reveal reveal-delay-1">Pronto para <span style="color:var(--green)">crescer?</span></h2>
+      <p class="reveal reveal-delay-2">Conte-nos sobre seu projeto. Respondemos em até 24 horas.</p>
+
+      <form class="contact-form reveal reveal-delay-2" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="seu@email.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>WhatsApp</label>
+            <input type="tel" placeholder="(11) 99999-9999">
+          </div>
+          <div class="form-group">
+            <label>Serviço de interesse</label>
+            <select>
+              <option value="">Selecione...</option>
+              <option>Criação de Site</option>
+              <option>Desenvolvimento de App</option>
+              <option>Marketing Digital</option>
+              <option>Gestão de Redes Sociais</option>
+              <option>Design Gráfico</option>
+              <option>Consultoria em TI</option>
+              <option>Pacote completo</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Conta um pouco sobre seu projeto</label>
+          <textarea placeholder="O que você precisa? Qual é o seu objetivo?"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="border:none; cursor:pointer; width:100%; justify-content:center; font-size:16px; padding:16px;">
+          Enviar mensagem
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div id="form-success" style="display:none; color:var(--green); font-family:var(--font-head); font-weight:600; text-align:center; padding: 16px; border: 1px solid var(--green); border-radius: 8px; background: var(--green-glow);">
+          ✓ Mensagem enviada! Entraremos em contato em breve.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="uploads/logo-1777550210245.png" alt="Agência do Japa">
+        <p>Startup de marketing e tecnologia focada em ouvir, entender e entregar resultados reais para o seu negócio.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Criação de Sites</a></li>
+          <li><a href="#servicos">Apps Mobile</a></li>
+          <li><a href="#servicos">Marketing Digital</a></li>
+          <li><a href="#servicos">Design Gráfico</a></li>
+          <li><a href="#servicos">Consultoria em TI</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#depoimentos">Clientes</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:contato@agenciadojapa.com.br">Email</a></li>
+          <li><a href="#contato">Orçamento</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Agência do Japa. Todos os direitos reservados.</span>
+      <span>© Agência do Japa · Todos os direitos reservados</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a class="whatsapp-float" href="https://wa.me/5511999999999" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.003 3.2C9.375 3.2 3.997 8.578 3.997 15.206c0 2.128.557 4.207 1.617 6.04L3.2 28.8l7.83-2.357a12.843 12.843 0 0 0 4.973 1.003c6.629 0 12.006-5.378 12.006-12.006 0-6.626-5.377-12.24-12.006-12.24zm0 22.143a10.7 10.7 0 0 1-5.098-1.296l-.365-.214-4.648 1.4 1.33-4.526-.238-.375a10.7 10.7 0 0 1-1.656-5.727c0-5.888 4.791-10.679 10.675-10.679 5.885 0 10.676 4.79 10.676 10.68 0 5.887-4.79 10.737-10.676 10.737zm5.864-8.012c-.322-.162-1.902-.938-2.197-1.046-.296-.107-.512-.161-.727.162-.215.322-.834 1.045-1.022 1.26-.188.214-.376.242-.698.08-.323-.162-1.362-.502-2.594-1.6-.959-.854-1.607-1.908-1.795-2.23-.188-.323-.02-.497.141-.659.146-.146.323-.377.484-.566.162-.188.215-.322.323-.538.107-.215.054-.404-.027-.566-.08-.162-.726-1.75-.995-2.397-.26-.63-.527-.543-.727-.553l-.619-.011c-.215 0-.566.08-.861.404-.296.323-1.131 1.107-1.131 2.694s1.158 3.125 1.32 3.34c.161.215 2.28 3.479 5.524 4.878.772.334 1.375.534 1.844.683.774.247 1.48.212 2.036.129.621-.093 1.902-.779 2.17-1.531.27-.752.27-1.396.188-1.531-.08-.135-.295-.215-.617-.377z"/>
+  </svg>
+</a>
+<div class="whatsapp-tooltip">
+  <p>Olá! Quer um orçamento rápido? Chama a gente no WhatsApp! 👋</p>
+  <a href="https://wa.me/5511999999999" target="_blank">Falar agora →</a>
+</div>
+
+<script>
+  // Theme toggle
+  function toggleTheme() {
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  }
+
+  // Apply saved theme on load
+  (function() {
+    const saved = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+  })();
+
+  // Blog filter
+  function filterBlog(cat, btn) {
+    document.querySelectorAll('.bf-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const featured = document.querySelector('.blog-featured');
+    const featCat = featured ? featured.dataset.blogCat : '';
+    if (featured) featured.style.display = (cat === 'all' || featCat === cat) ? '' : 'none';
+    document.querySelectorAll('.blog-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.blogCat === cat) ? '' : 'none';
+    });
+  }
+
+  // Blog modal with AI content when available and static fallback for GitHub Pages.
+  const ARTICLES = [
+    {
+      cat: 'Marketing & Ads · Destaque',
+      meta: '28 Abr 2025 · 8 min de leitura',
+      title: 'Meta Ads em 2025: as novas funcionalidades de IA que estão mudando o jogo',
+      prompt: 'Escreva um artigo de blog completo e profissional em português brasileiro sobre as novas funcionalidades de IA do Meta Ads em 2025 (Advantage+, criativos gerados por IA, segmentação automática). Explique como usar isso para reduzir custo por lead e aumentar ROAS. Use ## subtítulos, **negrito** e listas. Tom prático e direto. Máximo 600 palavras.'
+    },
+    {
+      cat: 'Programação',
+      meta: '25 Abr 2025 · 6 min de leitura',
+      title: 'React 19 chegou: o que muda no desenvolvimento frontend',
+      prompt: 'Escreva um artigo de blog completo e profissional em português brasileiro sobre as principais novidades do React 19: Server Components, Actions, React Compiler e melhorias de performance. Explique de forma acessível o impacto prático para desenvolvedores. Use ## subtítulos, **negrito** e exemplos. Máximo 600 palavras.'
+    },
+    {
+      cat: 'Marketing & Ads',
+      meta: '20 Abr 2025 · 5 min de leitura',
+      title: 'Google Ads Performance Max: vale a pena em 2025?',
+      prompt: 'Escreva um artigo de blog completo e profissional em português brasileiro sobre as campanhas Google Ads Performance Max em 2025. Explique quando usar, quando evitar, como otimizar e quais métricas acompanhar. Use ## subtítulos, **negrito** e listas com dicas práticas. Máximo 600 palavras.'
+    },
+    {
+      cat: 'Programação',
+      meta: '15 Abr 2025 · 7 min de leitura',
+      title: 'Node.js vs Bun vs Deno: qual runtime usar em 2025?',
+      prompt: 'Escreva um artigo de blog completo e profissional em português brasileiro comparando Node.js, Bun e Deno em 2025. Aborde performance, ecossistema, casos de uso ideais e maturidade. Conclua com uma recomendação prática. Use ## subtítulos, **negrito** e uma tabela comparativa em markdown. Máximo 600 palavras.'
+    },
+    {
+      cat: 'Design',
+      meta: '10 Abr 2025 · 4 min de leitura',
+      title: 'Design system: por que sua empresa precisa de um (e como montar)',
+      prompt: 'Escreva um artigo de blog completo e profissional em português brasileiro sobre design systems: o que são, por que empresas precisam, como montar do zero e quais ferramentas usar (Figma, Storybook etc). Use ## subtítulos, **negrito** e listas com passos práticos. Máximo 600 palavras.'
+    },
+    {
+      cat: 'Negócios',
+      meta: '2 Abr 2025 · 6 min de leitura',
+      title: 'Agência digital ou freelancer: qual contratar para seu projeto?',
+      prompt: 'Escreva um artigo de blog completo e profissional em português brasileiro comparando honestamente contratar uma agência digital versus um freelancer para projetos de desenvolvimento e marketing. Aborde custo, qualidade, prazo, risco e o momento ideal para cada escolha. Use ## subtítulos, **negrito** e listas. Máximo 600 palavras.'
+    }
+  ];
+
+  const STATIC_ARTICLES = [
+    `## IA no Meta Ads deixou de ser extra
+
+Advantage+, criativos gerados por IA e segmentação automática ajudam campanhas a aprender mais rápido quando a conta tem eventos bem configurados.
+
+- Use criativos variados para acelerar testes
+- Acompanhe custo por lead, taxa de conversão e qualidade do atendimento
+- Separe campanhas de prospecção e remarketing quando houver volume
+
+O ganho real aparece quando a oferta, a página e o CRM trabalham juntos. IA melhora distribuição, mas a estratégia ainda define o resultado.`,
+    `## O impacto prático do React 19
+
+React 19 simplifica fluxos comuns com Actions, melhora a experiência com Server Components e prepara o caminho para ganhos de performance com o React Compiler.
+
+- Actions reduzem código repetitivo em formulários
+- Server Components ajudam a enviar menos JavaScript ao navegador
+- O Compiler pode otimizar renderizações em projetos bem estruturados
+
+Para times, a recomendação é migrar com calma: comece por novas telas, valide bibliotecas do ecossistema e mantenha testes cobrindo fluxos críticos.`,
+    `## Performance Max vale a pena quando existe base
+
+Campanhas Performance Max podem funcionar muito bem quando há conversões confiáveis, criativos suficientes e objetivos claros.
+
+- Use quando a conta já mede eventos importantes
+- Evite quando o orçamento é baixo demais para gerar aprendizado
+- Avalie ROAS, CPA, termos de busca e qualidade dos leads
+
+O melhor resultado costuma vir de uma estrutura simples, com bons sinais de audiência e páginas alinhadas ao anúncio.`,
+    `## Escolha runtime pelo contexto
+
+Node.js segue como opção mais segura para produção ampla, Bun é forte em performance e experiência de desenvolvimento, e Deno se destaca por segurança e TypeScript nativo.
+
+- Node.js: ecossistema maduro e maior compatibilidade
+- Bun: builds rápidos e ótima ergonomia
+- Deno: segurança por padrão e APIs modernas
+
+Para produtos comerciais, Node.js ainda é a escolha conservadora. Para ferramentas internas e projetos novos, Bun e Deno merecem testes controlados.`,
+    `## Design system é decisão de escala
+
+Um design system reduz retrabalho, melhora consistência e ajuda produto, design e desenvolvimento a falarem a mesma língua.
+
+- Comece por cores, tipografia, espaçamento e botões
+- Documente componentes com estados reais
+- Use Figma para design e Storybook para implementação
+
+O objetivo não é criar uma biblioteca bonita, mas acelerar entregas sem perder qualidade visual e experiência de uso.`,
+    `## Agência e freelancer resolvem problemas diferentes
+
+Freelancers podem ser ideais para demandas pontuais, enquanto agências tendem a entregar melhor quando o projeto envolve estratégia, múltiplas disciplinas e continuidade.
+
+- Freelancer: menor custo inicial e comunicação direta
+- Agência: mais capacidade, processo e visão integrada
+- Projeto complexo: priorize equipe, suporte e previsibilidade
+
+A melhor escolha depende do risco, prazo, orçamento e importância do projeto para o crescimento do negócio.`
+  ];
+
+  function simpleMarkdown(text) {
+    return text
+      .replace(/## (.+)/g, '<h3 style="font-family:var(--font-head);font-size:20px;font-weight:700;margin:24px 0 10px;color:var(--white);">$1</h3>')
+      .replace(/\*\*(.+?)\*\*/g, '<strong style="color:var(--white);">$1</strong>')
+      .replace(/^- (.+)/gm, '<li style="margin-bottom:6px;">$1</li>')
+      .replace(/(<li.*<\/li>\n?)+/g, '<ul style="padding-left:20px;margin:12px 0;">$&</ul>')
+      .replace(/\n\n/g, '</p><p style="margin-bottom:14px;">')
+      .replace(/^(?!<)(.+)$/gm, '<p style="margin-bottom:14px;">$1</p>');
+  }
+
+  async function openArticle(idx) {
+    const art = ARTICLES[idx];
+    const modal = document.getElementById('blog-modal');
+    document.getElementById('modal-cat').textContent = art.cat;
+    document.getElementById('modal-meta').textContent = art.meta;
+    document.getElementById('modal-title').textContent = art.title;
+    document.getElementById('modal-content').innerHTML = '';
+    document.getElementById('modal-loading').style.display = 'block';
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+
+    try {
+      const text = window.claude?.complete
+        ? await window.claude.complete(art.prompt)
+        : STATIC_ARTICLES[idx];
+      document.getElementById('modal-loading').style.display = 'none';
+      document.getElementById('modal-content').innerHTML = simpleMarkdown(text);
+    } catch(e) {
+      document.getElementById('modal-loading').style.display = 'none';
+      document.getElementById('modal-content').innerHTML = simpleMarkdown(STATIC_ARTICLES[idx] || '## Conteúdo em atualização\n\nEste artigo será atualizado em breve.');
+    }
+  }
+
+  function closeBlogModal() {
+    document.getElementById('blog-modal').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('blog-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeBlogModal();
+  });
+
+  // Portfolio filter
+  function filterPortfolio(cat, btn) {
+    document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.removeAttribute('hidden');
+      } else {
+        card.setAttribute('hidden', '');
+      }
+    });
+  }
+
+  // Navbar scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Counter animation
+  function animateCounter(el, target, suffix = '') {
+    let start = 0;
+    const duration = 1800;
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(ease * target) + (progress === 1 ? suffix : '');
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const val = parseInt(el.dataset.count);
+        const suffix = el.dataset.count === '247' ? '%' : '+';
+        animateCounter(el, val, suffix);
+        statObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('[data-count]').forEach(el => statObserver.observe(el));
+
+  // Form
+  function handleForm(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }, 1200);
+  }
+
+  // Tweaks
+  window.addEventListener('message', (e) => {
+    if (e.data?.type === '__activate_edit_mode') showTweaks();
+    if (e.data?.type === '__deactivate_edit_mode') hideTweaks();
+  });
+  window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "accentColor": "#00c136",
+    "heroTitle": "Crescimento digital que realmente funciona",
+    "darkMode": true
+  }/*EDITMODE-END*/;
+
+  function showTweaks() {
+    document.getElementById('tweaks-panel').style.display = 'flex';
+  }
+  function hideTweaks() {
+    document.getElementById('tweaks-panel').style.display = 'none';
+  }
+</script>
+
+<!-- Tweaks Panel (minimal) -->
+<div id="tweaks-panel" style="display:none; position:fixed; bottom:32px; left:32px; z-index:300; background:oklch(0.11 0.006 148); border:1px solid oklch(0.20 0.01 148); border-radius:16px; padding:24px; width:280px; flex-direction:column; gap:16px; box-shadow:0 8px 40px rgba(0,0,0,0.6);">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+    <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:oklch(0.97 0.005 148);">Tweaks</span>
+    <button onclick="hideTweaks(); window.parent.postMessage({type:'__edit_mode_dismissed'},'*')" style="background:none; border:none; color:oklch(0.6 0.005 148); cursor:pointer; font-size:18px; line-height:1; padding:0;">×</button>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:8px;">
+    <label style="font-family:'Space Grotesk',sans-serif; font-size:12px; color:oklch(0.6 0.005 148); font-weight:500;">Cor de destaque</label>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <button onclick="setAccent('#00c136')" style="width:32px;height:32px;border-radius:50%;background:#00c136;border:2px solid white;cursor:pointer;"></button>
+      <button onclick="setAccent('#00bfff')" style="width:32px;height:32px;border-radius:50%;background:#00bfff;border:2px solid transparent;cursor:pointer;"></button>
+      <button onclick="setAccent('#ff6b35')" style="width:32px;height:32px;border-radius:50%;background:#ff6b35;border:2px solid transparent;cursor:pointer;"></button>
+      <button onclick="setAccent('#a855f7')" style="width:32px;height:32px;border-radius:50%;background:#a855f7;border:2px solid transparent;cursor:pointer;"></button>
+      <button onclick="setAccent('#f59e0b')" style="width:32px;height:32px;border-radius:50%;background:#f59e0b;border:2px solid transparent;cursor:pointer;"></button>
+    </div>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:8px;">
+    <label style="font-family:'Space Grotesk',sans-serif; font-size:12px; color:oklch(0.6 0.005 148); font-weight:500;">Fundo</label>
+    <div style="display:flex; gap:8px;">
+      <button onclick="setBg('dark')" style="flex:1;padding:8px;border-radius:6px;background:#0a0d0b;border:1px solid #333;color:white;font-size:12px;cursor:pointer;font-family:'Space Grotesk',sans-serif;">Escuro</button>
+      <button onclick="setBg('navy')" style="flex:1;padding:8px;border-radius:6px;background:#080d18;border:1px solid #333;color:white;font-size:12px;cursor:pointer;font-family:'Space Grotesk',sans-serif;">Navy</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function setAccent(color) {
+    document.documentElement.style.setProperty('--green', color);
+    const dim = color + '88';
+    document.documentElement.style.setProperty('--green-glow', color + '22');
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { accentColor: color } }, '*');
+  }
+  function setBg(mode) {
+    if (mode === 'dark') {
+      document.documentElement.style.setProperty('--bg', 'oklch(0.08 0.006 148)');
+      document.documentElement.style.setProperty('--bg2', 'oklch(0.11 0.006 148)');
+    } else {
+      document.documentElement.style.setProperty('--bg', 'oklch(0.07 0.01 240)');
+      document.documentElement.style.setProperty('--bg2', 'oklch(0.10 0.01 240)');
+    }
+  }
+</script>
+
+</body>
+</html>
