@@ -828,6 +828,111 @@
   .meta-dot { color: var(--border); }
   .live-text { color: var(--green); font-weight: 600; }
 
+  .case-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    background: oklch(0 0 0 / 0.78);
+    backdrop-filter: blur(10px);
+    overflow-y: auto;
+    padding: 40px 20px;
+  }
+
+  .case-modal[open] {
+    display: block;
+  }
+
+  .case-modal-panel {
+    max-width: 1040px;
+    margin: 0 auto;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 80px oklch(0 0 0 / 0.55);
+  }
+
+  .case-modal-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .case-modal-header h3 {
+    font-family: var(--font-head);
+    font-size: 28px;
+    line-height: 1.2;
+    margin-top: 6px;
+  }
+
+  .case-modal-header p {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 680px;
+    margin-top: 10px;
+  }
+
+  .case-modal-close {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    color: var(--gray);
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .case-modal-close:hover {
+    color: var(--white);
+    border-color: var(--green);
+  }
+
+  .case-gallery {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .case-asset {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .case-asset img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;
+  }
+
+  .case-asset figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    color: var(--gray);
+    font-family: var(--font-head);
+    font-size: 13px;
+  }
+
+  .case-asset figcaption a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
   /* ─── DEPOIMENTOS ─── */
   #depoimentos { background: var(--bg2); }
 
@@ -1247,6 +1352,10 @@
     .sobre-grid { grid-template-columns: 1fr; }
     .sobre-visual { display: none; }
     .portfolio-grid { grid-template-columns: 1fr; }
+    .case-gallery { grid-template-columns: 1fr; }
+    .case-modal-header { padding: 22px; }
+    .case-modal-header h3 { font-size: 24px; }
+    .case-gallery { padding: 16px; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .blog-grid { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1749,14 +1858,14 @@
 
       <!-- Identidade Visual — Espaço Morada Azul -->
       <div class="portfolio-card reveal reveal-delay-1" data-cat="case">
-        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.09 0.03 230), oklch(0.18 0.07 220));">
+        <div class="portfolio-thumb" style="background-image: url('Cases/Apresenta%C3%A7%C3%A3o%20Logo%20-%20Morada.png'); background-size: cover; background-position: center;">
           <div class="portfolio-tech-stack">
             <span class="tech-pill">Branding</span>
             <span class="tech-pill">Identidade Visual</span>
             <span class="tech-pill">Design</span>
           </div>
           <div class="portfolio-overlay">
-            <a href="#contato" class="overlay-btn">Ver Case →</a>
+            <a href="#case-morada" class="overlay-btn" onclick="openCaseModal(event)">Ver Case →</a>
           </div>
         </div>
         <div class="portfolio-info">
@@ -1810,6 +1919,36 @@
     </div>
   </div>
 </section>
+
+<!-- CASE MODAL -->
+<div id="case-morada" class="case-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="case-morada-title">
+  <div class="case-modal-panel">
+    <div class="case-modal-header">
+      <div>
+        <span class="section-tag">Case · Identidade Visual</span>
+        <h3 id="case-morada-title">Espaço Morada Azul</h3>
+        <p>Visualização dos itens da identidade visual desenvolvida para o Morada Azul: apresentação do logotipo e paleta de cores da marca.</p>
+      </div>
+      <button class="case-modal-close" onclick="closeCaseModal()" aria-label="Fechar case">&times;</button>
+    </div>
+    <div class="case-gallery">
+      <figure class="case-asset">
+        <img src="Cases/Apresenta%C3%A7%C3%A3o%20Logo%20-%20Morada.png" alt="Apresentação do logo do Espaço Morada Azul" loading="lazy">
+        <figcaption>
+          <span>Apresentação do logo</span>
+          <a href="Cases/Apresenta%C3%A7%C3%A3o%20Logo%20-%20Morada.png" target="_blank" rel="noopener">Abrir imagem</a>
+        </figcaption>
+      </figure>
+      <figure class="case-asset">
+        <img src="Cases/Paleta%20de%20Cores%20-%20Morada.png" alt="Paleta de cores do Espaço Morada Azul" loading="lazy">
+        <figcaption>
+          <span>Paleta de cores</span>
+          <a href="Cases/Paleta%20de%20Cores%20-%20Morada.png" target="_blank" rel="noopener">Abrir imagem</a>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
 
 <!-- DEPOIMENTOS -->
 <section id="depoimentos">
@@ -2386,6 +2525,31 @@ A melhor escolha depende do risco, prazo, orçamento e importância do projeto p
 
   document.getElementById('blog-modal').addEventListener('click', function(e) {
     if (e.target === this) closeBlogModal();
+  });
+
+  function openCaseModal(event) {
+    if (event) event.preventDefault();
+    const modal = document.getElementById('case-morada');
+    modal.setAttribute('open', '');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCaseModal() {
+    const modal = document.getElementById('case-morada');
+    modal.removeAttribute('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('case-morada').addEventListener('click', function(e) {
+    if (e.target === this) closeCaseModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('case-morada').hasAttribute('open')) {
+      closeCaseModal();
+    }
   });
 
   // Portfolio filter
