@@ -90,6 +90,9 @@
   }
 
   .nav-logo img { height: 36px; object-fit: contain; }
+  .logo-light { display: none; }
+  [data-theme="light"] .logo-dark { display: none; }
+  [data-theme="light"] .logo-light { display: block; }
 
   .nav-links {
     display: flex;
@@ -1257,7 +1260,8 @@
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-logo" href="#hero">
-    <img src="uploads/logo-1777550210245.png" alt="Agência do Japa">
+    <img class="logo-dark" src="uploads/logo-1777550210245.png" alt="Agência do Japa">
+    <img class="logo-light" src="uploads/logo-1777550210246.png" alt="Agência do Japa">
   </a>
   <ul class="nav-links">
     <li><a href="#servicos">Serviços</a></li>
@@ -1534,11 +1538,12 @@
   <div class="section-inner">
     <div class="reveal"><span class="section-tag">Cases & Portfólio</span></div>
     <h2 class="reveal reveal-delay-1">Projetos reais, <span style="color:var(--green)">impacto real</span></h2>
-    <p class="section-desc reveal reveal-delay-2">Do ERP industrial ao e-commerce — entregamos sistemas completos com tecnologia de ponta.</p>
+    <p class="section-desc reveal reveal-delay-2">Landing pages, apps, sistemas e e-commerces — entregamos projetos completos com tecnologia de ponta.</p>
 
     <!-- Filter tabs -->
     <div class="portfolio-filters reveal reveal-delay-2">
       <button class="pf-btn active" onclick="filterPortfolio('all', this)">Todos</button>
+      <button class="pf-btn" onclick="filterPortfolio('lp', this)">Landing Pages</button>
       <button class="pf-btn" onclick="filterPortfolio('sistema', this)">Sistemas</button>
       <button class="pf-btn" onclick="filterPortfolio('ecommerce', this)">E-commerce</button>
       <button class="pf-btn" onclick="filterPortfolio('app', this)">Apps</button>
@@ -1632,7 +1637,7 @@
       </div>
 
       <!-- B10 Mantos -->
-      <div class="portfolio-card reveal reveal-delay-1" data-cat="ecommerce">
+      <div class="portfolio-card reveal reveal-delay-1" data-cat="lp ecommerce">
         <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.09 0.005 30), oklch(0.18 0.04 45));">
           <div class="portfolio-tech-stack">
             <span class="tech-pill">HTML5</span>
@@ -1688,7 +1693,7 @@
       </div>
 
       <!-- Betina Nails -->
-      <div class="portfolio-card reveal reveal-delay-3" data-cat="sistema">
+      <div class="portfolio-card reveal reveal-delay-3" data-cat="lp">
         <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.10 0.02 330), oklch(0.18 0.06 310));">
           <div class="portfolio-tech-stack">
             <span class="tech-pill">HTML5</span>
@@ -1749,12 +1754,12 @@
       <div class="testimonial-card reveal reveal-delay-1">
         <div class="stars">★★★★★</div>
         <div class="quote-mark">"</div>
-        <p class="testimonial-text">O que mais me impressionou foi o atendimento. Eles realmente ouviram o que precisávamos antes de propor qualquer solução.</p>
+        <p class="testimonial-text"></p>
         <div class="testimonial-author">
-          <div class="author-avatar" style="background:#60a5fa;">R</div>
+          <div class="author-avatar" style="background:#60a5fa;">F</div>
           <div>
-            <div class="author-name">Rafaela Costa</div>
-            <div class="author-role">Fundadora · Estúdio Forma</div>
+            <div class="author-name">Flavia Siqueira</div>
+            <div class="author-role">CEO · Espaço Morada Azul</div>
           </div>
         </div>
       </div>
@@ -2087,7 +2092,8 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="uploads/logo-1777550210245.png" alt="Agência do Japa">
+        <img class="logo-dark" src="uploads/logo-1777550210245.png" alt="Agência do Japa">
+        <img class="logo-light" src="uploads/logo-1777550210246.png" alt="Agência do Japa">
         <p>Startup de marketing e tecnologia focada em ouvir, entender e entregar resultados reais para o seu negócio.</p>
       </div>
       <div class="footer-col">
@@ -2306,7 +2312,7 @@ A melhor escolha depende do risco, prazo, orçamento e importância do projeto p
     document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     document.querySelectorAll('.portfolio-card').forEach(card => {
-      if (cat === 'all' || card.dataset.cat === cat) {
+      if (cat === 'all' || card.dataset.cat.split(' ').includes(cat)) {
         card.removeAttribute('hidden');
       } else {
         card.setAttribute('hidden', '');
