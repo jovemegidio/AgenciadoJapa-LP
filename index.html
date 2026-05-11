@@ -1547,6 +1547,7 @@
       <button class="pf-btn" onclick="filterPortfolio('sistema', this)">Sistemas</button>
       <button class="pf-btn" onclick="filterPortfolio('ecommerce', this)">E-commerce</button>
       <button class="pf-btn" onclick="filterPortfolio('app', this)">Apps</button>
+      <button class="pf-btn" onclick="filterPortfolio('case', this)">Cases</button>
     </div>
 
     <div class="portfolio-grid">
@@ -1608,6 +1609,33 @@
         </div>
       </div>
 
+      <!-- Totem -->
+      <div class="portfolio-card reveal reveal-delay-2" data-cat="app">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.09 0.02 200), oklch(0.16 0.04 220));">
+          <div class="portfolio-tech-stack">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Node.js</span>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="#contato" class="overlay-btn">Saiba mais →</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">App · Totem Interativo</div>
+          <h3>Totem</h3>
+          <p>Aplicação interativa para totem físico: interface touch, fluxo de atendimento personalizado, integração com sistemas internos e painel de gestão.</p>
+          <div class="portfolio-meta">
+            <span class="meta-item">Touch UI</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">Offline-first</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">Painel admin</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Pontto -->
       <div class="portfolio-card reveal reveal-delay-2" data-cat="sistema">
         <div class="portfolio-thumb" style="background-image: url('Site/Pontto.jpg'); background-size: cover; background-position: center;">
@@ -1665,29 +1693,82 @@
         </div>
       </div>
 
-      <!-- ContentHub CMS -->
-      <div class="portfolio-card reveal reveal-delay-2" data-cat="sistema">
-        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.10 0.01 160), oklch(0.16 0.025 160));">
+      <!-- Tom Tom -->
+      <div class="portfolio-card reveal reveal-delay-2" data-cat="lp">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.09 0.015 35), oklch(0.17 0.05 50));">
           <div class="portfolio-tech-stack">
-            <span class="tech-pill">React</span>
-            <span class="tech-pill">TypeScript</span>
-            <span class="tech-pill">Node.js</span>
-            <span class="tech-pill">SQLite</span>
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
           </div>
+          <div class="portfolio-status live">● Online</div>
           <div class="portfolio-overlay">
-            <a href="https://github.com/jovemegidio/Sistema-CMS" target="_blank" class="overlay-btn">Ver GitHub →</a>
+            <a href="#contato" class="overlay-btn">Ver Projeto →</a>
           </div>
         </div>
         <div class="portfolio-info">
-          <div class="portfolio-cat">CMS · Full-Stack</div>
-          <h3>ContentHub CMS</h3>
-          <p>CMS profissional com painel admin moderno, autenticação JWT, CRUD completo, biblioteca de mídia, gráficos e controle de acesso por roles.</p>
+          <div class="portfolio-cat">Landing Page · Institucional</div>
+          <h3>Tom Tom</h3>
+          <p>Landing page institucional com design moderno, seções de serviços, galeria, depoimentos e CTA otimizado para conversão.</p>
           <div class="portfolio-meta">
-            <span class="meta-item">JWT + Roles</span>
+            <span class="meta-item">Alta conversão</span>
             <span class="meta-dot">·</span>
-            <span class="meta-item">Docker</span>
+            <span class="meta-item">Mobile-first</span>
             <span class="meta-dot">·</span>
-            <span class="meta-item">REST API</span>
+            <span class="meta-item live-text">Online</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elite Company -->
+      <div class="portfolio-card reveal reveal-delay-3" data-cat="lp">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.09 0.01 240), oklch(0.17 0.03 260));">
+          <div class="portfolio-tech-stack">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+          </div>
+          <div class="portfolio-status live">● Online</div>
+          <div class="portfolio-overlay">
+            <a href="#contato" class="overlay-btn">Ver Projeto →</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Landing Page · Empresarial</div>
+          <h3>Elite Company</h3>
+          <p>Landing page corporativa com identidade sofisticada, apresentação de serviços, cases de sucesso e formulário de captação de leads.</p>
+          <div class="portfolio-meta">
+            <span class="meta-item">Captação de leads</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">SEO on-page</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item live-text">Online</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Identidade Visual — Espaço Morada Azul -->
+      <div class="portfolio-card reveal reveal-delay-1" data-cat="case">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg, oklch(0.09 0.03 230), oklch(0.18 0.07 220));">
+          <div class="portfolio-tech-stack">
+            <span class="tech-pill">Branding</span>
+            <span class="tech-pill">Identidade Visual</span>
+            <span class="tech-pill">Design</span>
+          </div>
+          <div class="portfolio-overlay">
+            <a href="#contato" class="overlay-btn">Ver Case →</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-cat">Case · Identidade Visual</div>
+          <h3>Espaço Morada Azul</h3>
+          <p>Criação completa de identidade visual: logotipo, paleta de cores, tipografia, papelaria e manual de marca para o Espaço Morada Azul.</p>
+          <div class="portfolio-meta">
+            <span class="meta-item">Logo + Manual</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">Papelaria</span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">Social media</span>
           </div>
         </div>
       </div>
@@ -1706,15 +1787,15 @@
           </div>
         </div>
         <div class="portfolio-info">
-          <div class="portfolio-cat">Sistema Web · Agendamento</div>
-          <h3>Betina Nails Studio</h3>
-          <p>Sistema completo para nail designer: agenda interativa, gestão de clientes, galeria de trabalhos, catálogo de serviços e 8 temas de cor.</p>
+          <div class="portfolio-cat">Landing Page · Beleza & Estética</div>
+          <h3>Betina Nails</h3>
+          <p>Landing page para nail designer com galeria de trabalhos, catálogo de serviços, agendamento via WhatsApp e identidade visual exclusiva.</p>
           <div class="portfolio-meta">
-            <span class="meta-item">8 temas</span>
+            <span class="meta-item">Galeria</span>
             <span class="meta-dot">·</span>
-            <span class="meta-item">Zero backend</span>
+            <span class="meta-item">WhatsApp CTA</span>
             <span class="meta-dot">·</span>
-            <span class="meta-item">SPA</span>
+            <span class="meta-item">Mobile-first</span>
           </div>
         </div>
       </div>
